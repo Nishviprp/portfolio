@@ -1,570 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nishvi Patel | Data Engineer | AI Developer</title>
-  <meta name="description" content="Portfolio of Nishvi Patel, Data Engineer and AI Developer specializing in ETL pipelines, LLM applications, cloud systems, and data engineering.">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishvi Patel | Data Engineer · AI Developer</title>
+<meta name="description" content="Portfolio of Nishvi Patel, Data Engineer and AI Developer specializing in ETL pipelines, LLM applications, cloud systems, and data engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated background -->
-  <div class="bg-animation">
-    <div class="grid-overlay"></div>
-    <div class="gradient-orb orb-1"></div>
-    <div class="gradient-orb orb-2"></div>
-    <div class="gradient-orb orb-3"></div>
+
+<!-- ================= INTRO OVERLAY ================= -->
+<div id="intro-overlay">
+  <div class="intro-stage">
+    <div class="avatar-wrap" id="avatarWrap">
+      <svg class="avatar-svg" viewBox="0 0 240 240" id="avatarSvg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+            <stop offset="0%" stop-color="#5EE6C5" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#5EE6C5" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="120" cy="120" r="110" fill="url(#glow)"/>
+        <!-- hair back -->
+        <path d="M58 118c0-44 28-78 62-78s62 34 62 78c0 8-2 16-4 22h-12c2-30-10-58-46-58s-48 28-46 58H62c-2-6-4-14-4-22z" fill="#3A2B4D"/>
+        <!-- neck -->
+        <rect x="104" y="150" width="32" height="26" rx="10" fill="#F2C29B"/>
+        <!-- face -->
+        <ellipse cx="120" cy="132" rx="46" ry="50" fill="#F7CBA4"/>
+        <!-- ears -->
+        <ellipse cx="72" cy="134" rx="7" ry="10" fill="#F2C29B"/>
+        <ellipse cx="168" cy="134" rx="7" ry="10" fill="#F2C29B"/>
+        <!-- hair front sweep -->
+        <path d="M60 120c-2-46 26-82 60-82 36 0 62 36 60 82-6-10-16-16-28-16-8 0-14 4-20 4-10 0-14-10-26-10-10 0-14 8-22 10-10 2-18-2-24 12z" fill="#473258"/>
+        <path d="M76 96c6-18 22-30 44-30 20 0 36 12 42 28-10 8-22-6-40-6-16 0-30 14-46 8z" fill="#3A2B4D"/>
+        <!-- side strands -->
+        <path d="M66 118c-4 22-2 46 6 64-10-4-18-16-18-34 0-12 4-22 12-30z" fill="#3A2B4D"/>
+        <path d="M174 118c4 22 2 46-6 64 10-4 18-16 18-34 0-12-4-22-12-30z" fill="#3A2B4D"/>
+        <!-- blush -->
+        <ellipse cx="98" cy="146" rx="7" ry="4.5" fill="#FF9C8A" opacity="0.55"/>
+        <ellipse cx="142" cy="146" rx="7" ry="4.5" fill="#FF9C8A" opacity="0.55"/>
+        <!-- eyebrows -->
+        <path d="M92 118c5-4 14-4 19-1" stroke="#3A2B4D" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <path d="M129 117c5-3 14-3 19 1" stroke="#3A2B4D" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <!-- eyes group (blinking target) -->
+        <g id="eyes">
+          <ellipse cx="101" cy="130" rx="6.5" ry="8" fill="#2B2233"/>
+          <ellipse cx="139" cy="130" rx="6.5" ry="8" fill="#2B2233"/>
+          <circle cx="103.4" cy="127" r="1.8" fill="#fff"/>
+          <circle cx="141.4" cy="127" r="1.8" fill="#fff"/>
+        </g>
+        <!-- blink overlay -->
+        <g id="blink" opacity="0">
+          <path d="M94 130c4-3 11-3 15 0" stroke="#3A2B4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M132 130c4-3 11-3 15 0" stroke="#3A2B4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+        <!-- nose -->
+        <path d="M120 134c0 6-3 10-3 13 0 3 2 5 5 5" stroke="#E8AE82" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <!-- mouth (talking target) -->
+        <g id="mouth">
+          <path id="mouthShape" d="M105 156c6 5 24 5 30 0" stroke="#A85B4E" stroke-width="3.4" fill="#A85B4E" fill-opacity="0" stroke-linecap="round"/>
+        </g>
+        <!-- collar / top -->
+        <path d="M88 176c10 14 54 14 64 0l8 28H80z" fill="#5EE6C5"/>
+        <path d="M104 176l16 14 16-14" stroke="#1A1523" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- earrings -->
+        <circle cx="72" cy="146" r="2.6" fill="#FFD56B"/>
+        <circle cx="168" cy="146" r="2.6" fill="#FFD56B"/>
+      </svg>
+      <div class="sound-bars" id="soundBars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="speech-card">
+      <div class="speech-dot-row"><span></span><span></span><span></span></div>
+      <p class="speech-text" id="speechText"></p>
+    </div>
+
+    <button class="skip-btn" id="skipIntro">Skip intro →</button>
   </div>
+</div>
 
-  <!-- Fixed Sidebar / Top Nav -->
-  <header class="site-header">
-    <div class="brand">
-    <a href="#intro">
-      <span class="logo-text">NP</span>
-      <span class="brand-name">NISHVI PATEL</span>
-    </a>
-    <span class="tagline">Data Engineer | AI Developer | Cloud Enthusiast</span>
-    <p class="mini-tagline">Building scalable data pipelines and AI systems</p>
-  </div>
+<noscript>
+  <style>#intro-overlay{display:none;} #site{opacity:1 !important; visibility:visible !important; transform:none !important;}</style>
+</noscript>
 
-  <nav class="site-nav" id="site-nav">
-    <a href="#intro" class="nav-link">Home</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#education" class="nav-link">Education</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
+<!-- ================= MAIN SITE ================= -->
+<div id="site" class="site-hidden">
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
+  <header class="nav" id="siteNav">
+    <a class="brand" href="#intro-anchor">NP <span>Nishvi Patel</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's talk</a>
   </header>
 
   <main>
-    <!-- Intro / Hero -->
-    <section id="intro" class="section intro">
-      <div class="intro-inner">
-        <div class="intro-text fade-in">
-        <p class="eyebrow">
-        <i class="fas fa-location-dot"></i> New York City, NY
-        <span class="separator">•</span>
-        Data Engineering • AI Systems • Cloud Infrastructure
-        </p>
-
-        <h1 class="gradient-text">
-          I build scalable data pipelines<br />
-          & AI-powered systems.
-        </h1>
-
-        <p class="lead">
-        Data Engineer and AI Developer with experience building ETL pipelines, cloud-based systems, and LLM-powered applications. Skilled in Python, SQL, and AWS, with a focus on scalable data infrastructure and production-ready AI solutions.
-        </p>
-
-        <div class="intro-actions">
-          <a href="#contact" class="btn primary">
-            <span>Contact Me</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="#projects" class="btn ghost">
-            <span>View Projects</span>
-          </a>
-        </div>
-
-        <div class="meta-line">
-          <span class="meta-badge">
-            <i class="fas fa-graduation-cap"></i> MS in Data Science (Stevens)
-          </span>
-          <span class="meta-badge">
-            <i class="fas fa-database"></i> Data Engineering • AI • AWS
-          </span>
-        </div>
-
-        <div class="intro-aside fade-in-delay">
-        <div class="avatar-frame">
-          <div class="avatar-glow"></div>
-          <img src="nishvi.jpg" alt="Portrait of Nishvi Patel" />
-        </div>
-
-        <div class="intro-links">
-          <a href="mailto:nishviprp@gmail.com" class="social-link" data-tooltip="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" class="social-link" data-tooltip="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-
-          <a href="https://github.com/Nishviprp" target="_blank" rel="noopener" class="social-link" data-tooltip="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <a href="Nishvi Patel Resume.pdf" download="Nishvi Patel Resume.pdf" class="social-link" data-tooltip="Download Resume">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-        </div>
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-eyebrow"><span class="dot"></span> New York City · Data Engineering · AI Systems · Cloud</div>
+      <h1>I turn messy data into <span class="hl">pipelines that run themselves</span> — and ideas into AI that ships.</h1>
+      <p class="hero-sub">Data Engineer &amp; AI Developer building ETL pipelines, cloud infrastructure, and LLM-powered applications. Comfortable in Python, SQL, and AWS — focused on systems that are reliable in production, not just in notebooks.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Contact me</a>
+        <a href="#projects" class="btn btn-ghost">View projects</a>
+        <a href="Nishvi%20Patel%20Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume ↓</a>
       </div>
+      <div class="hero-meta">
+        <span>🎓 MS in Data Science · Stevens Institute</span>
+        <span>🛠 Python · SQL · AWS · Airflow</span>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section narrative">
-      <div class="section-header">
-        <h2 class="section-title">Projects</h2>
-        <p>
-        Production-ready projects focused on data engineering, AI systems, and scalable cloud infrastructure — including ETL pipelines, LLM applications, and distributed systems.
-        </p>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <p class="eyebrow">Selected &amp; pinned work</p>
+        <h2>Projects</h2>
+        <p class="section-sub">A mix of production-style builds from my portfolio and the projects currently pinned on my GitHub profile.</p>
       </div>
-      <div class="narrative-grid">
-        <article class="narrative-block card-hover">
-        <div class="card-icon">
-          <i class="fas fa-brain"></i>
-        </div>
 
-        <h3>LLM Code Generation & Benchmarking System</h3>
+      <div class="project-grid">
 
-        <p>
-          Fine-tuned an open-source CodeGen LLM using LoRA (PEFT) on 5,000+ Python samples and built an automated evaluation framework using HumanEval.
-        </p>
-
-        <p>
-          Achieved performance comparable to GitHub Copilot while improving transparency, customization, and cost efficiency.
-        </p>
-
-        <div class="pill-row">
-          <span class="pill">Python</span>
-          <span class="pill">LLM</span>
-          <span class="pill">Hugging Face</span>
-          <span class="pill">LoRA</span>
-        </div>
-
-        <a href="https://github.com/Nishviprp/CodeGen-LLM-Benchmarking-" target="_blank">View Code</a>
+        <article class="project-card featured">
+          <div class="project-top">
+            <span class="project-tag">Featured</span>
+          </div>
+          <h3>LLM Code Generation &amp; Benchmarking System</h3>
+          <p>Fine-tuned an open-source CodeGen LLM with LoRA (PEFT) on 5,000+ Python samples and built an automated evaluation framework using HumanEval — reaching performance comparable to GitHub Copilot with far more transparency and control.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">LLM</span><span class="chip">Hugging Face</span><span class="chip">LoRA</span>
+          </div>
+          <a href="https://github.com/Nishviprp/CodeGen-LLM-Benchmarking-" target="_blank" rel="noopener" class="project-link">View code →</a>
         </article>
 
-        <article class="narrative-block card-hover">
-          <div class="card-icon">
-            <i class="fas fa-cloud"></i>
+        <article class="project-card featured">
+          <div class="project-top">
+            <span class="project-tag">Featured</span>
           </div>
-
-          <h3>AWS System Dependency & Risk Analysis</h3>
-
-          <p>
-            Designed a cloud-native architecture with 22 AWS services and built an LLM-driven pipeline to extract dependencies and generate system graphs.
-          </p>
-
-          <p>
-            Applied graph analytics (PageRank, centrality) to identify critical failure points and simulate outages affecting up to 70% of services.
-          </p>
-
-          <div class="pill-row">
-            <span class="pill">AWS</span>
-            <span class="pill">Python</span>
-            <span class="pill">NetworkX</span>
-            <span class="pill">Graph Analysis</span>
+          <h3>AWS System Dependency &amp; Risk Analysis</h3>
+          <p>Designed a cloud-native architecture spanning 22 AWS services and built an LLM-driven pipeline to extract dependencies and graph the system. Used PageRank and centrality analysis to find failure points capable of taking down 70% of services.</p>
+          <div class="chip-row">
+            <span class="chip">AWS</span><span class="chip">Python</span><span class="chip">NetworkX</span><span class="chip">Graph Analysis</span>
           </div>
-
-          <a href="https://github.com/Nishviprp/-AWS-Based-LMS-Risk-Dependency-Analysis" target="_blank">View Code</a>
+          <a href="https://github.com/Nishviprp/-AWS-Based-LMS-Risk-Dependency-Analysis" target="_blank" rel="noopener" class="project-link">View code →</a>
         </article>
 
-        <article class="narrative-block card-hover">
-          <div class="card-icon">
-            <i class="fas fa-database"></i>
-          </div>
-
+        <article class="project-card">
           <h3>End-to-End Data Pipeline</h3>
-
-          <p>
-            Built a scalable ETL pipeline using Python, Airflow, and AWS S3 for ingesting, transforming, and storing structured data.
-          </p>
-
-          <p>
-            Enabled analytics-ready datasets and optimized performance for downstream reporting and dashboarding.
-          </p>
-
-          <div class="pill-row">
-            <span class="pill">Python</span>
-            <span class="pill">Airflow</span>
-            <span class="pill">AWS</span>
-            <span class="pill">ETL</span>
+          <p>A scalable ETL pipeline built with Python, Airflow, and AWS S3 to ingest, transform, and store structured data — producing analytics-ready datasets optimized for downstream reporting.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">Airflow</span><span class="chip">AWS</span><span class="chip">ETL</span>
           </div>
         </article>
 
-        <article class="narrative-block card-hover">
-          <div class="card-icon">
-            <i class="fas fa-chart-line"></i>
+        <article class="project-card">
+          <h3>Data Analysis &amp; Visualization</h3>
+          <p>Exploratory data analysis on structured datasets to surface trends and business insights, paired with interactive visualizations that support data-driven decisions.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span>
           </div>
-
-          <h3>Data Analysis & Visualization Project</h3>
-
-          <p>
-            Performed exploratory data analysis (EDA) on structured datasets to uncover trends, patterns, and key business insights using Python.
-          </p>
-
-          <p>
-            Built interactive visualizations and dashboards to communicate insights effectively and support data-driven decision-making.
-          </p>
-
-          <div class="pill-row">
-            <span class="pill">Python</span>
-            <span class="pill">Pandas</span>
-            <span class="pill">Matplotlib</span>
-            <span class="pill">Data Analysis</span>
-          </div>
-
-          <a href="https://github.com/Nishviprp/Data-analysis" target="_blank">View Code</a>
+          <a href="https://github.com/Nishviprp/Data-analysis" target="_blank" rel="noopener" class="project-link">View code →</a>
         </article>
 
-        <article class="narrative-block card-hover">
-          <div class="card-icon">
-            <i class="fas fa-globe"></i>
+        <article class="project-card">
+          <h3>Web Scraping &amp; Data Collection</h3>
+          <p>Automated scraping pipelines pulling product and pricing data from Flipkart, Lenskart, and Amazon, then cleaning and structuring it for downstream analysis.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">BeautifulSoup</span><span class="chip">ETL</span>
           </div>
+          <a href="https://github.com/Nishviprp/Web-scraping" target="_blank" rel="noopener" class="project-link">View code →</a>
+        </article>
 
-          <h3>Web Scraping & Data Collection Pipeline</h3>
-
-          <p>
-            Developed automated web scraping pipelines to extract data from multiple online sources for analysis and insights generation.
-          </p>
-
-          <p>
-            Cleaned, structured, and stored scraped data for downstream processing and analytics workflows.
-          </p>
-
-          <div class="pill-row">
-            <span class="pill">Python</span>
-            <span class="pill">BeautifulSoup</span>
-            <span class="pill">Data Collection</span>
-            <span class="pill">ETL</span>
+        <article class="project-card">
+          <h3>Part-of-Speech Tagging</h3>
+          <p>POS tagging explored through both statistical and deep learning models — comparing Logistic Regression against an LSTM for labeling each word with its grammatical role.</p>
+          <div class="chip-row">
+            <span class="chip">Python</span><span class="chip">LSTM</span><span class="chip">NLP</span>
           </div>
+          <a href="https://github.com/Nishviprp/Part-of-Speech-POS-tagging" target="_blank" rel="noopener" class="project-link">View code →</a>
+        </article>
 
-          <a href="https://github.com/Nishviprp/Web-scraping" target="_blank">View Code</a>
+        <article class="project-card pinned">
+          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
+          <h3>PrivaSeal</h3>
+          <p>Collaborative project focused on privacy and data protection tooling, built alongside fellow contributors.</p>
+          <div class="chip-row"><span class="chip">Python</span></div>
+          <a href="https://github.com/koensantos/privaseal-project" target="_blank" rel="noopener" class="project-link">View code →</a>
+        </article>
+
+        <article class="project-card pinned">
+          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
+          <h3>BIA660 Final Project</h3>
+          <p>Final project for the Web Analytics (BIA 660) course, built collaboratively as part of coursework at Stevens.</p>
+          <div class="chip-row"><span class="chip">Jupyter Notebook</span></div>
+          <a href="https://github.com/SlinkySpace/BIA660_Final_Project" target="_blank" rel="noopener" class="project-link">View code →</a>
+        </article>
+
+        <article class="project-card pinned">
+          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
+          <h3>Atomization in Software</h3>
+          <p>Selenium browser-automation practice notebooks — breaking web interactions into atomic, testable steps: navigation, dropdowns, tabs, and iframes.</p>
+          <div class="chip-row"><span class="chip">Selenium</span><span class="chip">Python</span></div>
+          <a href="https://github.com/Nishviprp/Atomization-in-software" target="_blank" rel="noopener" class="project-link">View code →</a>
+        </article>
+
+        <article class="project-card pinned">
+          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
+          <h3>FinSight</h3>
+          <p>A Python project exploring financial data and insight generation. ⭐ Starred by the community.</p>
+          <div class="chip-row"><span class="chip">Python</span></div>
+          <a href="https://github.com/Nishviprp/finsight" target="_blank" rel="noopener" class="project-link">View code →</a>
         </article>
 
       </div>
     </section>
 
-    <!-- Experience timeline -->
-    <section id="experience" class="section experience">
-      <div class="section-header">
-        <h2 class="section-title">Experience</h2>
-        <p>Experience in data engineering, AI systems, and analytics across real-world business and cloud environments.</p>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <p class="eyebrow">Toolbox</p>
+        <h2>Skills &amp; Tools</h2>
+        <p class="section-sub">Technical expertise across data engineering, AI systems, cloud infrastructure, and analytics.</p>
       </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Programming &amp; Data Engineering</h4>
+          <ul><li>Python, SQL</li><li>ETL Pipelines, Data Modeling</li><li>Data Cleaning &amp; Transformation</li><li>APIs, Data Integration</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>AI &amp; Machine Learning</h4>
+          <ul><li>LLMs, NLP</li><li>Hugging Face, LoRA</li><li>Scikit-learn, XGBoost</li><li>Forecasting (ARIMA, LSTM)</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Cloud &amp; Tools</h4>
+          <ul><li>AWS (S3, EC2, RDS)</li><li>Airflow, Kafka</li><li>Docker, Git</li><li>Data Pipelines</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Data Analytics</h4>
+          <ul><li>Pandas, NumPy</li><li>Matplotlib</li><li>Power BI, Tableau</li><li>Data Visualization</li></ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <p class="eyebrow">Career so far</p>
+        <h2>Experience</h2>
+        <p class="section-sub">Real-world business and cloud environments across data engineering, analytics, and teaching.</p>
+      </div>
       <div class="timeline">
-        <article class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content glass-card">
-            <header>
-              <h3>Data Analyst | Data Engineering & Analytics</h3>
-              <span class="company">
-                <i class="fas fa-building"></i> Acorn Universal Consultancy LLP
-              </span>
-              <span class="date">
-                <i class="far fa-calendar"></i> Dec 2023 – Apr 2024
-              </span>
-            </header>
-
+        <div class="timeline-item">
+          <div class="timeline-date">Dec 2023 – Apr 2024</div>
+          <div class="timeline-body">
+            <h4>Data Analyst — Data Engineering &amp; Analytics</h4>
+            <p class="timeline-org">Acorn Universal Consultancy LLP</p>
             <ul>
-              <li>
-                Designed and implemented automated ETL pipelines integrating Microsoft Business Central 365, Excel, and Dynamics NAV, improving reporting efficiency by 30%.
-              </li>
-
-              <li>
-                Developed interactive Power BI dashboards tracking KPIs across 3 product platforms and 4 countries, enabling faster executive decision-making.
-              </li>
-
-              <li>
-                Performed predictive analytics and Pareto analysis to identify key revenue drivers, improving forecasting accuracy by 15%.
-              </li>
-
-              <li>
-                Optimized data workflows and reporting processes, reducing manual effort and enhancing data accessibility across teams.
-              </li>
+              <li>Designed automated ETL pipelines integrating Business Central 365, Excel, and Dynamics NAV, improving reporting efficiency by 30%.</li>
+              <li>Built interactive Power BI dashboards tracking KPIs across 3 product platforms and 4 countries.</li>
+              <li>Performed predictive analytics and Pareto analysis, improving forecasting accuracy by 15%.</li>
+              <li>Optimized data workflows, reducing manual effort and improving data accessibility across teams.</li>
             </ul>
           </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content glass-card">
-            <header>
-              <h3>Data Analyst Intern</h3>
-              <span class="company">
-                <i class="fas fa-building"></i> Elecon Engineering
-              </span>
-              <span class="date">
-                <i class="far fa-calendar"></i> May 2023 – Jul 2023
-              </span>
-            </header>
-
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">May 2023 – Jul 2023</div>
+          <div class="timeline-body">
+            <h4>Data Analyst Intern</h4>
+            <p class="timeline-org">Elecon Engineering</p>
             <ul>
-              <li>
-                Built Power BI dashboards and conducted forecasting analysis on occupancy, utilization, and revenue trends, improving forecast accuracy by 20%.
-              </li>
-
-              <li>
-                Developed web scraping pipelines to collect competitor pricing and market demand data for analysis and benchmarking.
-              </li>
-
-              <li>
-                Cleaned, transformed, and integrated data from multiple sources to support business insights and operational planning.
-              </li>
-
-              <li>
-                Delivered data-driven insights to improve resource planning and enhance operational efficiency.
-              </li>
+              <li>Built Power BI dashboards and forecasting models for occupancy, utilization, and revenue, improving forecast accuracy by 20%.</li>
+              <li>Developed web scraping pipelines for competitor pricing and market demand analysis.</li>
+              <li>Cleaned and integrated data from multiple sources to support business insights and planning.</li>
             </ul>
           </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content glass-card">
-            <header>
-              <h3>Teaching Assistant & Grader</h3>
-              <span class="company">
-                <i class="fas fa-building"></i> Stevens Institute of Technology
-              </span>
-              <span class="date">
-                <i class="far fa-calendar"></i> Sep 2025 – Dec 2025
-              </span>
-            </header>
-
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Sep 2025 – Dec 2025</div>
+          <div class="timeline-body">
+            <h4>Teaching Assistant &amp; Grader</h4>
+            <p class="timeline-org">Stevens Institute of Technology</p>
             <ul>
-              <li>
-                Assisted faculty in grading assignments, projects, and exams for data science and analytics coursework.
-              </li>
-
-              <li>
-                Supported students in understanding core concepts including Python, data analysis, and machine learning techniques.
-              </li>
-
-              <li>
-                Facilitated discussions and provided guidance on assignments, improving student engagement and learning outcomes.
-              </li>
-
-              <li>
-                Collaborated with instructors to streamline grading workflows and maintain consistency in evaluation.
-              </li>
+              <li>Graded assignments, projects, and exams for data science and analytics coursework.</li>
+              <li>Supported students in understanding Python, data analysis, and ML techniques.</li>
+              <li>Streamlined grading workflows and maintained evaluation consistency with instructors.</li>
             </ul>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section narrative">
-      <div class="section-header">
-        <h2 class="section-title">Skills & Tools</h2>
-        <p>
-          Technical expertise in data engineering, AI systems, cloud infrastructure, and analytics.
-        </p>
-      </div>
-
-      <div class="skills-columns">
-
-      <!-- Box 1 -->
-      <div class="skills-column glass-card">
-        <div class="skill-icon"><i class="fas fa-code"></i></div>
-        <h3>Programming & Data Engineering</h3>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Python, SQL</li>
-          <li><i class="fas fa-check-circle"></i> ETL Pipelines, Data Modeling</li>
-          <li><i class="fas fa-check-circle"></i> Data Cleaning & Transformation</li>
-          <li><i class="fas fa-check-circle"></i> APIs, Data Integration</li>
-        </ul>
-      </div>
-
-      <!-- Box 2 -->
-      <div class="skills-column glass-card">
-        <div class="skill-icon"><i class="fas fa-brain"></i></div>
-        <h3>AI & Machine Learning</h3>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> LLMs, NLP</li>
-          <li><i class="fas fa-check-circle"></i> Hugging Face, LoRA</li>
-          <li><i class="fas fa-check-circle"></i> Scikit-learn, XGBoost</li>
-          <li><i class="fas fa-check-circle"></i> Forecasting (ARIMA, LSTM)</li>
-        </ul>
-      </div>
-
-      <!-- Box 3 -->
-      <div class="skills-column glass-card">
-        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-        <h3>Cloud & Tools</h3>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> AWS (S3, EC2, RDS)</li>
-          <li><i class="fas fa-check-circle"></i> Airflow, Kafka</li>
-          <li><i class="fas fa-check-circle"></i> Docker, Git</li>
-          <li><i class="fas fa-check-circle"></i> Data Pipelines</li>
-        </ul>
-      </div>
-
-      <!-- Box 4 -->
-      <div class="skills-column glass-card">
-        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Data Analytics</h3>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Pandas, NumPy</li>
-          <li><i class="fas fa-check-circle"></i> Matplotlib</li>
-          <li><i class="fas fa-check-circle"></i> Power BI, Tableau</li>
-          <li><i class="fas fa-check-circle"></i> Data Visualization</li>
-        </ul>
-      </div>
-
-    </div>
-
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section education">
-      <div class="section-header">
-        <h2 class="section-title">Education</h2>
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="section-head">
+        <p class="eyebrow">Background</p>
+        <h2>Education</h2>
       </div>
       <div class="edu-grid">
-        <div class="edu-block glass-card">
-          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-
-          <h3>Master of Science in Data Science</h3>
-          <p class="degree">Data Science</p>
-          <p class="school">
-            Stevens Institute of Technology · Hoboken, NJ · Jan 2025 – May 2026 (Expected)
-          </p>
-          <p class="extra">Relevant Coursework: Data Engineering, Machine Learning, Cloud Computing</p>
+        <div class="edu-card">
+          <h4>Master of Science in Data Science</h4>
+          <p class="edu-org">Stevens Institute of Technology · Hoboken, NJ</p>
+          <p class="edu-date">Jan 2025 – May 2026 (Expected)</p>
+          <p class="edu-note">Relevant coursework: Data Engineering, Machine Learning, Cloud Computing</p>
         </div>
-        
-        <div class="edu-block glass-card">
-          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-
-          <h3>Bachelor of Engineering in Computer Engineering</h3>
-          <p class="degree">Computer Engineering</p>
-          <p class="school">
-            Charutar Vidya Mandal University · Gujarat, India · Jul 2020 – Jul 2024
-          </p>
+        <div class="edu-card">
+          <h4>Bachelor of Engineering in Computer Engineering</h4>
+          <p class="edu-org">Charutar Vidya Mandal University · Gujarat, India</p>
+          <p class="edu-date">Jul 2020 – Jul 2024</p>
         </div>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <div class="section-header">
-        <h2 class="section-title">Let's talk</h2>
-        <p>      Open to Data Engineer, AI Developer, and Data Analyst roles. Actively seeking full-time and internship opportunities.</p>
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="section-head">
+        <p class="eyebrow">Open to opportunities</p>
+        <h2>Let's talk</h2>
+        <p class="section-sub">Open to Data Engineer, AI Developer, and Data Analyst roles — actively seeking full-time and internship opportunities.</p>
       </div>
-      
-      <div class="contact-layout">
-        <div class="contact-details glass-card">
-          <h3>Get in touch</h3>
-          
-          <div class="contact-item">
-            <i class="fas fa-location-dot"></i>
-            <div>
-              <span class="contact-label">Location</span>
-              <span class="contact-value">New York City, NY</span>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <span class="contact-label">Email</span>
-               <a href="mailto:nishviprp@gmail.com" class="contact-value">nishviprp@gmail.com</a>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <span class="contact-label">Phone</span>
-              <span class="contact-value">+1 (201) 761‑9209</span>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <div>
-              <span class="contact-label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" class="contact-value">
-                linkedin.com/in/nishvi-patel-9186a4219
-              </a>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fab fa-github"></i>
-            <div>
-              <span class="contact-label">GitHub</span>
-              <a href="https://github.com/Nishviprp" target="_blank" rel="noopener" class="contact-value">
-                github.com/Nishviprp
-              </a>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fas fa-download"></i>
-            <div>
-              <span class="contact-label">Resume</span>
-              <a href="Nishvi Patel Resume.pdf" download="Nishvi Patel Resume.pdf" target="_blank" rel="noopener" class="contact-value">
-                Download Resume
-              </a>
-            </div>
-          </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="mailto:nishviprp@gmail.com">📧 nishviprp@gmail.com</a>
+          <a href="tel:+12017619209">📱 +1 (201) 761-9209</a>
+          <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener">💼 linkedin.com/in/nishvi-patel-9186a4219</a>
+          <a href="https://github.com/Nishviprp" target="_blank" rel="noopener">💻 github.com/Nishviprp</a>
+          <span class="contact-loc">📍 New York City, NY</span>
         </div>
-        
-        <form
-          action="https://formspree.io/f/xlgwqvwg"
-          method="POST"
-          class="contact-form glass-card"
-          id="contact-form"
-        >
-          <input type="text" name="_gotcha" style="display:none" autocomplete="off" />
-          <input type="hidden" name="_subject" value="Contact from Nishvi Patel Portfolio" />
-          <input type="hidden" name="_next" value="thank-you.html" />
-
-          <div class="form-group">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Your email</label>
-            <input type="email" id="email" name="_replyto" placeholder="your@email.com" required />
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Your message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about an opportunity, project, or collaboration..." required></textarea>
-          </div>
-          
-          <button type="submit" class="btn primary">
-            <span>Send message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <p class="form-status" id="form-status"></p>
+        <form class="contact-form" action="https://formsubmit.co/nishviprp@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+          <button type="submit" class="btn btn-primary">Send message</button>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-content">
-      <p>© <span id="year"></span> · Nishvi Patel · Data Engineer | AI Developer</p>
-
-      <div class="footer-links">
-        <a href="mailto:nishviprp@gmail.com">
-          <i class="fas fa-envelope"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i>
-        </a>
-
-        <a href="https://github.com/Nishviprp" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+    <p>© <span id="year"></span> Nishvi Patel · Data Engineer | AI Developer</p>
+    <div class="footer-links">
+      <a href="mailto:nishviprp@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Nishviprp" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
