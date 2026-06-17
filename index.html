@@ -3,357 +3,378 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nishvi Patel | Data Engineer · AI Developer</title>
+<title>Nishvi Patel | Data Engineer & AI Developer</title>
 <meta name="description" content="Portfolio of Nishvi Patel, Data Engineer and AI Developer specializing in ETL pipelines, LLM applications, cloud systems, and data engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= INTRO OVERLAY ================= -->
-<div id="intro-overlay">
-  <div class="intro-stage">
-    <div class="avatar-wrap" id="avatarWrap">
-      <svg class="avatar-svg" viewBox="0 0 240 240" id="avatarSvg">
-        <defs>
-          <radialGradient id="glow" cx="50%" cy="40%" r="65%">
-            <stop offset="0%" stop-color="#5EE6C5" stop-opacity="0.35"/>
-            <stop offset="100%" stop-color="#5EE6C5" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <circle cx="120" cy="120" r="110" fill="url(#glow)"/>
-        <!-- hair back -->
-        <path d="M58 118c0-44 28-78 62-78s62 34 62 78c0 8-2 16-4 22h-12c2-30-10-58-46-58s-48 28-46 58H62c-2-6-4-14-4-22z" fill="#3A2B4D"/>
-        <!-- neck -->
-        <rect x="104" y="150" width="32" height="26" rx="10" fill="#F2C29B"/>
-        <!-- face -->
-        <ellipse cx="120" cy="132" rx="46" ry="50" fill="#F7CBA4"/>
-        <!-- ears -->
-        <ellipse cx="72" cy="134" rx="7" ry="10" fill="#F2C29B"/>
-        <ellipse cx="168" cy="134" rx="7" ry="10" fill="#F2C29B"/>
-        <!-- hair front sweep -->
-        <path d="M60 120c-2-46 26-82 60-82 36 0 62 36 60 82-6-10-16-16-28-16-8 0-14 4-20 4-10 0-14-10-26-10-10 0-14 8-22 10-10 2-18-2-24 12z" fill="#473258"/>
-        <path d="M76 96c6-18 22-30 44-30 20 0 36 12 42 28-10 8-22-6-40-6-16 0-30 14-46 8z" fill="#3A2B4D"/>
-        <!-- side strands -->
-        <path d="M66 118c-4 22-2 46 6 64-10-4-18-16-18-34 0-12 4-22 12-30z" fill="#3A2B4D"/>
-        <path d="M174 118c4 22 2 46-6 64 10-4 18-16 18-34 0-12-4-22-12-30z" fill="#3A2B4D"/>
-        <!-- blush -->
-        <ellipse cx="98" cy="146" rx="7" ry="4.5" fill="#FF9C8A" opacity="0.55"/>
-        <ellipse cx="142" cy="146" rx="7" ry="4.5" fill="#FF9C8A" opacity="0.55"/>
-        <!-- eyebrows -->
-        <path d="M92 118c5-4 14-4 19-1" stroke="#3A2B4D" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-        <path d="M129 117c5-3 14-3 19 1" stroke="#3A2B4D" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-        <!-- eyes group (blinking target) -->
-        <g id="eyes">
-          <ellipse cx="101" cy="130" rx="6.5" ry="8" fill="#2B2233"/>
-          <ellipse cx="139" cy="130" rx="6.5" ry="8" fill="#2B2233"/>
-          <circle cx="103.4" cy="127" r="1.8" fill="#fff"/>
-          <circle cx="141.4" cy="127" r="1.8" fill="#fff"/>
-        </g>
-        <!-- blink overlay -->
-        <g id="blink" opacity="0">
-          <path d="M94 130c4-3 11-3 15 0" stroke="#3A2B4D" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M132 130c4-3 11-3 15 0" stroke="#3A2B4D" stroke-width="3" fill="none" stroke-linecap="round"/>
-        </g>
-        <!-- nose -->
-        <path d="M120 134c0 6-3 10-3 13 0 3 2 5 5 5" stroke="#E8AE82" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-        <!-- mouth (talking target) -->
-        <g id="mouth">
-          <path id="mouthShape" d="M105 156c6 5 24 5 30 0" stroke="#A85B4E" stroke-width="3.4" fill="#A85B4E" fill-opacity="0" stroke-linecap="round"/>
-        </g>
-        <!-- collar / top -->
-        <path d="M88 176c10 14 54 14 64 0l8 28H80z" fill="#5EE6C5"/>
-        <path d="M104 176l16 14 16-14" stroke="#1A1523" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- earrings -->
-        <circle cx="72" cy="146" r="2.6" fill="#FFD56B"/>
-        <circle cx="168" cy="146" r="2.6" fill="#FFD56B"/>
-      </svg>
-      <div class="sound-bars" id="soundBars" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-      </div>
-    </div>
+<div id="preloader">
+  <div class="loader-ring"></div>
+</div>
 
-    <div class="speech-card">
-      <div class="speech-dot-row"><span></span><span></span><span></span></div>
-      <p class="speech-text" id="speechText"></p>
-    </div>
+<!-- ============ NAV ============ -->
+<header class="navbar" id="navbar">
+  <a href="#home" class="logo">NP<span>.</span></a>
+  <nav class="nav-menu" id="navMenu">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav-btn">Hire me</a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-    <button class="skip-btn" id="skipIntro">Skip intro →</button>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
   </div>
-</div>
 
-<noscript>
-  <style>#intro-overlay{display:none;} #site{opacity:1 !important; visibility:visible !important; transform:none !important;}</style>
-</noscript>
-
-<!-- ================= MAIN SITE ================= -->
-<div id="site" class="site-hidden">
-
-  <header class="nav" id="siteNav">
-    <a class="brand" href="#intro-anchor">NP <span>Nishvi Patel</span></a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Let's talk</a>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="about">
-      <div class="hero-eyebrow"><span class="dot"></span> New York City · Data Engineering · AI Systems · Cloud</div>
-      <h1>I turn messy data into <span class="hl">pipelines that run themselves</span> — and ideas into AI that ships.</h1>
-      <p class="hero-sub">Data Engineer &amp; AI Developer building ETL pipelines, cloud infrastructure, and LLM-powered applications. Comfortable in Python, SQL, and AWS — focused on systems that are reliable in production, not just in notebooks.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Contact me</a>
-        <a href="#projects" class="btn btn-ghost">View projects</a>
-        <a href="Nishvi%20Patel%20Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume ↓</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-greet reveal-up">Hi there, I'm</p>
+      <h1 class="hero-name reveal-up delay-1">Nishvi Patel</h1>
+      <h2 class="hero-role reveal-up delay-2">
+        <span id="typedRole"></span><span class="type-cursor">|</span>
+      </h2>
+      <p class="hero-desc reveal-up delay-3">
+        Data Engineer &amp; AI Developer building ETL pipelines, cloud infrastructure,
+        and LLM-powered applications — based in New York City.
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="#projects" class="btn btn-solid">View my work</a>
+        <a href="Nishvi%20Patel%20Resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
       </div>
-      <div class="hero-meta">
-        <span>🎓 MS in Data Science · Stevens Institute</span>
-        <span>🛠 Python · SQL · AWS · Airflow</span>
+      <div class="hero-socials reveal-up delay-5">
+        <a href="https://github.com/Nishviprp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:nishviprp@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="section-head">
-        <p class="eyebrow">Selected &amp; pinned work</p>
-        <h2>Projects</h2>
-        <p class="section-sub">A mix of production-style builds from my portfolio and the projects currently pinned on my GitHub profile.</p>
-      </div>
-
-      <div class="project-grid">
-
-        <article class="project-card featured">
-          <div class="project-top">
-            <span class="project-tag">Featured</span>
-          </div>
-          <h3>LLM Code Generation &amp; Benchmarking System</h3>
-          <p>Fine-tuned an open-source CodeGen LLM with LoRA (PEFT) on 5,000+ Python samples and built an automated evaluation framework using HumanEval — reaching performance comparable to GitHub Copilot with far more transparency and control.</p>
-          <div class="chip-row">
-            <span class="chip">Python</span><span class="chip">LLM</span><span class="chip">Hugging Face</span><span class="chip">LoRA</span>
-          </div>
-          <a href="https://github.com/Nishviprp/CodeGen-LLM-Benchmarking-" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card featured">
-          <div class="project-top">
-            <span class="project-tag">Featured</span>
-          </div>
-          <h3>AWS System Dependency &amp; Risk Analysis</h3>
-          <p>Designed a cloud-native architecture spanning 22 AWS services and built an LLM-driven pipeline to extract dependencies and graph the system. Used PageRank and centrality analysis to find failure points capable of taking down 70% of services.</p>
-          <div class="chip-row">
-            <span class="chip">AWS</span><span class="chip">Python</span><span class="chip">NetworkX</span><span class="chip">Graph Analysis</span>
-          </div>
-          <a href="https://github.com/Nishviprp/-AWS-Based-LMS-Risk-Dependency-Analysis" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card">
-          <h3>End-to-End Data Pipeline</h3>
-          <p>A scalable ETL pipeline built with Python, Airflow, and AWS S3 to ingest, transform, and store structured data — producing analytics-ready datasets optimized for downstream reporting.</p>
-          <div class="chip-row">
-            <span class="chip">Python</span><span class="chip">Airflow</span><span class="chip">AWS</span><span class="chip">ETL</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3>Data Analysis &amp; Visualization</h3>
-          <p>Exploratory data analysis on structured datasets to surface trends and business insights, paired with interactive visualizations that support data-driven decisions.</p>
-          <div class="chip-row">
-            <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span>
-          </div>
-          <a href="https://github.com/Nishviprp/Data-analysis" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Web Scraping &amp; Data Collection</h3>
-          <p>Automated scraping pipelines pulling product and pricing data from Flipkart, Lenskart, and Amazon, then cleaning and structuring it for downstream analysis.</p>
-          <div class="chip-row">
-            <span class="chip">Python</span><span class="chip">BeautifulSoup</span><span class="chip">ETL</span>
-          </div>
-          <a href="https://github.com/Nishviprp/Web-scraping" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Part-of-Speech Tagging</h3>
-          <p>POS tagging explored through both statistical and deep learning models — comparing Logistic Regression against an LSTM for labeling each word with its grammatical role.</p>
-          <div class="chip-row">
-            <span class="chip">Python</span><span class="chip">LSTM</span><span class="chip">NLP</span>
-          </div>
-          <a href="https://github.com/Nishviprp/Part-of-Speech-POS-tagging" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card pinned">
-          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
-          <h3>PrivaSeal</h3>
-          <p>Collaborative project focused on privacy and data protection tooling, built alongside fellow contributors.</p>
-          <div class="chip-row"><span class="chip">Python</span></div>
-          <a href="https://github.com/koensantos/privaseal-project" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card pinned">
-          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
-          <h3>BIA660 Final Project</h3>
-          <p>Final project for the Web Analytics (BIA 660) course, built collaboratively as part of coursework at Stevens.</p>
-          <div class="chip-row"><span class="chip">Jupyter Notebook</span></div>
-          <a href="https://github.com/SlinkySpace/BIA660_Final_Project" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card pinned">
-          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
-          <h3>Atomization in Software</h3>
-          <p>Selenium browser-automation practice notebooks — breaking web interactions into atomic, testable steps: navigation, dropdowns, tabs, and iframes.</p>
-          <div class="chip-row"><span class="chip">Selenium</span><span class="chip">Python</span></div>
-          <a href="https://github.com/Nishviprp/Atomization-in-software" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-        <article class="project-card pinned">
-          <div class="project-top"><span class="project-tag pin">📌 Pinned</span></div>
-          <h3>FinSight</h3>
-          <p>A Python project exploring financial data and insight generation. ⭐ Starred by the community.</p>
-          <div class="chip-row"><span class="chip">Python</span></div>
-          <a href="https://github.com/Nishviprp/finsight" target="_blank" rel="noopener" class="project-link">View code →</a>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="section-head">
-        <p class="eyebrow">Toolbox</p>
-        <h2>Skills &amp; Tools</h2>
-        <p class="section-sub">Technical expertise across data engineering, AI systems, cloud infrastructure, and analytics.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4>Programming &amp; Data Engineering</h4>
-          <ul><li>Python, SQL</li><li>ETL Pipelines, Data Modeling</li><li>Data Cleaning &amp; Transformation</li><li>APIs, Data Integration</li></ul>
-        </div>
-        <div class="skill-card">
-          <h4>AI &amp; Machine Learning</h4>
-          <ul><li>LLMs, NLP</li><li>Hugging Face, LoRA</li><li>Scikit-learn, XGBoost</li><li>Forecasting (ARIMA, LSTM)</li></ul>
-        </div>
-        <div class="skill-card">
-          <h4>Cloud &amp; Tools</h4>
-          <ul><li>AWS (S3, EC2, RDS)</li><li>Airflow, Kafka</li><li>Docker, Git</li><li>Data Pipelines</li></ul>
-        </div>
-        <div class="skill-card">
-          <h4>Data Analytics</h4>
-          <ul><li>Pandas, NumPy</li><li>Matplotlib</li><li>Power BI, Tableau</li><li>Data Visualization</li></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="section-head">
-        <p class="eyebrow">Career so far</p>
-        <h2>Experience</h2>
-        <p class="section-sub">Real-world business and cloud environments across data engineering, analytics, and teaching.</p>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Dec 2023 – Apr 2024</div>
-          <div class="timeline-body">
-            <h4>Data Analyst — Data Engineering &amp; Analytics</h4>
-            <p class="timeline-org">Acorn Universal Consultancy LLP</p>
-            <ul>
-              <li>Designed automated ETL pipelines integrating Business Central 365, Excel, and Dynamics NAV, improving reporting efficiency by 30%.</li>
-              <li>Built interactive Power BI dashboards tracking KPIs across 3 product platforms and 4 countries.</li>
-              <li>Performed predictive analytics and Pareto analysis, improving forecasting accuracy by 15%.</li>
-              <li>Optimized data workflows, reducing manual effort and improving data accessibility across teams.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">May 2023 – Jul 2023</div>
-          <div class="timeline-body">
-            <h4>Data Analyst Intern</h4>
-            <p class="timeline-org">Elecon Engineering</p>
-            <ul>
-              <li>Built Power BI dashboards and forecasting models for occupancy, utilization, and revenue, improving forecast accuracy by 20%.</li>
-              <li>Developed web scraping pipelines for competitor pricing and market demand analysis.</li>
-              <li>Cleaned and integrated data from multiple sources to support business insights and planning.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Sep 2025 – Dec 2025</div>
-          <div class="timeline-body">
-            <h4>Teaching Assistant &amp; Grader</h4>
-            <p class="timeline-org">Stevens Institute of Technology</p>
-            <ul>
-              <li>Graded assignments, projects, and exams for data science and analytics coursework.</li>
-              <li>Supported students in understanding Python, data analysis, and ML techniques.</li>
-              <li>Streamlined grading workflows and maintained evaluation consistency with instructors.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section" id="education">
-      <div class="section-head">
-        <p class="eyebrow">Background</p>
-        <h2>Education</h2>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-card">
-          <h4>Master of Science in Data Science</h4>
-          <p class="edu-org">Stevens Institute of Technology · Hoboken, NJ</p>
-          <p class="edu-date">Jan 2025 – May 2026 (Expected)</p>
-          <p class="edu-note">Relevant coursework: Data Engineering, Machine Learning, Cloud Computing</p>
-        </div>
-        <div class="edu-card">
-          <h4>Bachelor of Engineering in Computer Engineering</h4>
-          <p class="edu-org">Charutar Vidya Mandal University · Gujarat, India</p>
-          <p class="edu-date">Jul 2020 – Jul 2024</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section contact-section" id="contact">
-      <div class="section-head">
-        <p class="eyebrow">Open to opportunities</p>
-        <h2>Let's talk</h2>
-        <p class="section-sub">Open to Data Engineer, AI Developer, and Data Analyst roles — actively seeking full-time and internship opportunities.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <a href="mailto:nishviprp@gmail.com">📧 nishviprp@gmail.com</a>
-          <a href="tel:+12017619209">📱 +1 (201) 761-9209</a>
-          <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener">💼 linkedin.com/in/nishvi-patel-9186a4219</a>
-          <a href="https://github.com/Nishviprp" target="_blank" rel="noopener">💻 github.com/Nishviprp</a>
-          <span class="contact-loc">📍 New York City, NY</span>
-        </div>
-        <form class="contact-form" action="https://formsubmit.co/nishviprp@gmail.com" method="POST">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
-          <textarea name="message" placeholder="Your message" rows="4" required></textarea>
-          <button type="submit" class="btn btn-primary">Send message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Nishvi Patel · Data Engineer | AI Developer</p>
-    <div class="footer-links">
-      <a href="mailto:nishviprp@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Nishviprp" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </footer>
-</div>
+
+    <div class="hero-photo reveal-up delay-2">
+      <div class="photo-ring"></div>
+      <img src="nishvi.jpg" alt="Nishvi Patel">
+      <div class="float-card float-card-1"><i class="fa-solid fa-database"></i> Data Engineering</div>
+      <div class="float-card float-card-2"><i class="fa-solid fa-robot"></i> AI &amp; LLMs</div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-down" aria-label="Scroll down">
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <p class="section-tag reveal-up">Get to know me</p>
+  <h2 class="section-title reveal-up">About Me</h2>
+
+  <div class="about-grid">
+    <div class="about-img reveal-up">
+      <img src="nishvi.jpg" alt="Nishvi Patel portrait">
+      <div class="about-img-accent"></div>
+    </div>
+    <div class="about-content reveal-up delay-1">
+      <h3>Data Engineer &amp; AI Developer based in New York City</h3>
+      <p>
+        I'm a Data Science graduate student at Stevens Institute of Technology with hands-on
+        experience building ETL pipelines, cloud-native systems, and LLM-powered applications.
+        I care about turning messy, real-world data into infrastructure that's reliable enough
+        to run in production — not just in a notebook.
+      </p>
+      <p>
+        My recent work spans fine-tuning open-source LLMs with LoRA, designing AWS architectures
+        with dependency-risk analysis, and shipping ETL pipelines with Airflow. I'm comfortable
+        moving between data engineering, machine learning, and analytics depending on what a
+        problem actually needs.
+      </p>
+      <div class="about-info-grid">
+        <div><span class="label">Email</span><span class="value">nishviprp@gmail.com</span></div>
+        <div><span class="label">Location</span><span class="value">New York City, NY</span></div>
+        <div><span class="label">Degree</span><span class="value">MS Data Science (Stevens)</span></div>
+        <div><span class="label">Status</span><span class="value">Open to opportunities</span></div>
+      </div>
+      <a href="#contact" class="btn btn-solid">Let's talk</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section-alt" id="skills">
+  <p class="section-tag reveal-up">What I work with</p>
+  <h2 class="section-title reveal-up">Skills &amp; Tools</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal-up">
+      <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+      <h4>Programming &amp; Data Engineering</h4>
+      <div class="tag-row">
+        <span>Python</span><span>SQL</span><span>ETL Pipelines</span><span>Data Modeling</span><span>APIs</span>
+      </div>
+    </div>
+    <div class="skill-card reveal-up delay-1">
+      <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+      <h4>AI &amp; Machine Learning</h4>
+      <div class="tag-row">
+        <span>LLMs</span><span>NLP</span><span>Hugging Face</span><span>LoRA</span><span>Scikit-learn</span><span>XGBoost</span>
+      </div>
+    </div>
+    <div class="skill-card reveal-up delay-2">
+      <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+      <h4>Cloud &amp; Tools</h4>
+      <div class="tag-row">
+        <span>AWS (S3, EC2, RDS)</span><span>Airflow</span><span>Kafka</span><span>Docker</span><span>Git</span>
+      </div>
+    </div>
+    <div class="skill-card reveal-up delay-3">
+      <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <h4>Data Analytics</h4>
+      <div class="tag-row">
+        <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Power BI</span><span>Tableau</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <p class="section-tag reveal-up">Selected work</p>
+  <h2 class="section-title reveal-up">Projects</h2>
+  <p class="section-sub reveal-up">A mix of featured builds and projects pulled straight from my GitHub.</p>
+
+  <div class="project-grid">
+
+    <article class="project-card reveal-up">
+      <div class="project-thumb thumb-1"><i class="fa-solid fa-robot"></i></div>
+      <div class="project-body">
+        <h4>LLM Code Generation &amp; Benchmarking</h4>
+        <p>Fine-tuned an open-source CodeGen LLM with LoRA (PEFT) on 5,000+ Python samples and built an automated HumanEval evaluation framework — reaching Copilot-level performance with far more transparency.</p>
+        <div class="tag-row"><span>Python</span><span>LLM</span><span>Hugging Face</span><span>LoRA</span></div>
+        <a href="https://github.com/Nishviprp/CodeGen-LLM-Benchmarking-" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up delay-1">
+      <div class="project-thumb thumb-2"><i class="fa-solid fa-diagram-project"></i></div>
+      <div class="project-body">
+        <h4>AWS System Dependency &amp; Risk Analysis</h4>
+        <p>Designed a 22-service AWS architecture and built an LLM-driven pipeline to extract dependencies and graph the system, using PageRank and centrality analysis to find failure points affecting up to 70% of services.</p>
+        <div class="tag-row"><span>AWS</span><span>Python</span><span>NetworkX</span></div>
+        <a href="https://github.com/Nishviprp/-AWS-Based-LMS-Risk-Dependency-Analysis" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up delay-2">
+      <div class="project-thumb thumb-3"><i class="fa-solid fa-arrows-spin"></i></div>
+      <div class="project-body">
+        <h4>End-to-End Data Pipeline</h4>
+        <p>A scalable ETL pipeline built with Python, Airflow, and AWS S3 to ingest, transform, and store structured data — producing analytics-ready datasets for downstream reporting.</p>
+        <div class="tag-row"><span>Python</span><span>Airflow</span><span>AWS</span></div>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up">
+      <div class="project-thumb thumb-4"><i class="fa-solid fa-chart-pie"></i></div>
+      <div class="project-body">
+        <h4>Data Analysis &amp; Visualization</h4>
+        <p>Exploratory analysis on structured datasets to surface trends and business insights, with interactive visualizations supporting data-driven decisions.</p>
+        <div class="tag-row"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+        <a href="https://github.com/Nishviprp/Data-analysis" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up delay-1">
+      <div class="project-thumb thumb-5"><i class="fa-solid fa-spider"></i></div>
+      <div class="project-body">
+        <h4>Web Scraping &amp; Data Collection</h4>
+        <p>Automated scraping pipelines pulling product and pricing data from Flipkart, Lenskart, and Amazon, then cleaning and structuring it for downstream analysis.</p>
+        <div class="tag-row"><span>Python</span><span>BeautifulSoup</span></div>
+        <a href="https://github.com/Nishviprp/Web-scraping" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up delay-2">
+      <div class="project-thumb thumb-6"><i class="fa-solid fa-spell-check"></i></div>
+      <div class="project-body">
+        <h4>Part-of-Speech Tagging</h4>
+        <p>POS tagging explored through both statistical and deep learning models — comparing Logistic Regression against an LSTM for labeling each word's grammatical role.</p>
+        <div class="tag-row"><span>Python</span><span>LSTM</span><span>NLP</span></div>
+        <a href="https://github.com/Nishviprp/Part-of-Speech-POS-tagging" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up">
+      <div class="project-thumb thumb-7"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      <div class="project-body">
+        <h4>Time Series Forecasting</h4>
+        <p>Forecasting model built on monthly champagne sales data for Navodita Infotech — exploring trend, seasonality, and stationarity for accurate future predictions.</p>
+        <div class="tag-row"><span>Python</span><span>Time Series</span><span>ARIMA</span></div>
+        <a href="https://github.com/Nishviprp/Navodita-Infotech" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up delay-1">
+      <div class="project-thumb thumb-8"><i class="fa-solid fa-mouse-pointer"></i></div>
+      <div class="project-body">
+        <h4>Atomization in Software</h4>
+        <p>Selenium browser-automation practice notebooks — breaking web interactions into atomic, testable steps: navigation, dropdowns, tabs, and iframes.</p>
+        <div class="tag-row"><span>Selenium</span><span>Python</span></div>
+        <a href="https://github.com/Nishviprp/Atomization-in-software" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal-up delay-2">
+      <div class="project-thumb thumb-9"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="project-body">
+        <h4>PrivaSeal</h4>
+        <p>📌 Pinned — a collaborative project focused on privacy and data protection tooling, built alongside fellow contributors.</p>
+        <div class="tag-row"><span>Python</span></div>
+        <a href="https://github.com/koensantos/privaseal-project" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="projects-more reveal-up">
+    <a href="https://github.com/Nishviprp?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
+      View all on GitHub <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section section-alt" id="experience">
+  <p class="section-tag reveal-up">Career so far</p>
+  <h2 class="section-title reveal-up">Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item reveal-up">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">Dec 2023 – Apr 2024</span>
+        <h4>Data Analyst — Data Engineering &amp; Analytics</h4>
+        <p class="timeline-org">Acorn Universal Consultancy LLP</p>
+        <ul>
+          <li>Designed automated ETL pipelines integrating Business Central 365, Excel, and Dynamics NAV, improving reporting efficiency by 30%.</li>
+          <li>Built interactive Power BI dashboards tracking KPIs across 3 product platforms and 4 countries.</li>
+          <li>Performed predictive analytics and Pareto analysis, improving forecasting accuracy by 15%.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item reveal-up delay-1">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">May 2023 – Jul 2023</span>
+        <h4>Data Analyst Intern</h4>
+        <p class="timeline-org">Elecon Engineering</p>
+        <ul>
+          <li>Built Power BI dashboards and forecasting models for occupancy, utilization, and revenue, improving forecast accuracy by 20%.</li>
+          <li>Developed web scraping pipelines for competitor pricing and market demand analysis.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item reveal-up delay-2">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">Sep 2025 – Dec 2025</span>
+        <h4>Teaching Assistant &amp; Grader</h4>
+        <p class="timeline-org">Stevens Institute of Technology</p>
+        <ul>
+          <li>Graded assignments, projects, and exams for data science and analytics coursework.</li>
+          <li>Supported students in understanding Python, data analysis, and ML techniques.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section" id="education">
+  <p class="section-tag reveal-up">Background</p>
+  <h2 class="section-title reveal-up">Education</h2>
+
+  <div class="edu-grid">
+    <div class="edu-card reveal-up">
+      <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <h4>Master of Science in Data Science</h4>
+      <p class="edu-org">Stevens Institute of Technology · Hoboken, NJ</p>
+      <p class="edu-date">Jan 2025 – May 2026 (Expected)</p>
+      <p class="edu-note">Relevant coursework: Data Engineering, Machine Learning, Cloud Computing</p>
+    </div>
+    <div class="edu-card reveal-up delay-1">
+      <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+      <h4>Bachelor of Engineering in Computer Engineering</h4>
+      <p class="edu-org">Charutar Vidya Mandal University · Gujarat, India</p>
+      <p class="edu-date">Jul 2020 – Jul 2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-alt" id="contact">
+  <p class="section-tag reveal-up">Open to opportunities</p>
+  <h2 class="section-title reveal-up">Let's Talk</h2>
+  <p class="section-sub reveal-up">Open to Data Engineer, AI Developer, and Data Analyst roles — actively seeking full-time and internship opportunities.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info reveal-up">
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div><span class="label">Email</span><a href="mailto:nishviprp@gmail.com">nishviprp@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+        <div><span class="label">Phone</span><a href="tel:+12017619209">+1 (201) 761-9209</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div><span class="label">Location</span><span class="value">New York City, NY</span></div>
+      </div>
+      <div class="contact-socials">
+        <a href="https://github.com/Nishviprp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <form class="contact-form reveal-up delay-1" action="https://formsubmit.co/nishviprp@gmail.com" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn btn-solid">Send message <i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <a href="#home" class="logo">NP<span>.</span></a>
+  <p>© <span id="year"></span> Nishvi Patel. Built with curiosity and a lot of coffee.</p>
+  <div class="footer-socials">
+    <a href="https://github.com/Nishviprp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="mailto:nishviprp@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</footer>
+
+<a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
 <script src="script.js"></script>
 </body>

@@ -1,132 +1,101 @@
 // ============================================================
-// INTRO SEQUENCE: avatar "speaks" the introduction, then reveals site
+// PRELOADER
+// ============================================================
+window.addEventListener("load", () => {
+  const pre = document.getElementById("preloader");
+  setTimeout(() => pre.classList.add("done"), 250);
+});
+
+// ============================================================
+// TYPED ROLE ROTATOR
 // ============================================================
 (function () {
-  const lines = [
-    "Hey! I'm Nishvi's portfolio assistant 👋",
-    "She's a Data Engineer & AI Developer based in NYC.",
-    "She builds ETL pipelines, cloud systems, and LLM-powered apps.",
-    "Let me show you what she's been working on...",
-  ];
+  const roles = ["Data Engineer", "AI Developer", "Cloud Enthusiast", "LLM Builder"];
+  const el = document.getElementById("typedRole");
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
 
-  const speechText = document.getElementById("speechText");
-  const soundBars = document.getElementById("soundBars");
-  const mouthShape = document.getElementById("mouthShape");
-  const eyes = document.getElementById("eyes");
-  const blink = document.getElementById("blink");
-  const overlay = document.getElementById("intro-overlay");
-  const site = document.getElementById("site");
-  const skipBtn = document.getElementById("skipIntro");
-
-  const MOUTH_TALK = "M104 154c6 10 24 10 32 0c-1 7-8 12-16 12s-15-5-16-12z";
-  const MOUTH_REST = "M105 156c6 5 24 5 30 0";
-
-  let talkInterval = null;
-  let blinkInterval = null;
-  let finished = false;
-
-  function startTalking() {
-    soundBars.classList.add("active");
-    let open = false;
-    talkInterval = setInterval(() => {
-      mouthShape.setAttribute("d", open ? MOUTH_REST : MOUTH_TALK);
-      mouthShape.setAttribute("fill-opacity", open ? "0" : "1");
-      open = !open;
-    }, 140);
-  }
-
-  function stopTalking() {
-    soundBars.classList.remove("active");
-    clearInterval(talkInterval);
-    mouthShape.setAttribute("d", MOUTH_REST);
-    mouthShape.setAttribute("fill-opacity", "0");
-  }
-
-  function startBlinking() {
-    blinkInterval = setInterval(() => {
-      eyes.style.opacity = "0";
-      blink.style.opacity = "1";
-      setTimeout(() => {
-        eyes.style.opacity = "1";
-        blink.style.opacity = "0";
-      }, 140);
-    }, 2600 + Math.random() * 1500);
-  }
-
-  function typeLine(text, onDone) {
-    speechText.innerHTML = "";
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
-    let i = 0;
-    startTalking();
-    const typer = setInterval(() => {
-      speechText.textContent = text.slice(0, i + 1);
-      speechText.appendChild(cursor);
-      i++;
-      if (i >= text.length) {
-        clearInterval(typer);
-        stopTalking();
-        setTimeout(onDone, 850);
+  function tick() {
+    const word = roles[roleIndex];
+    if (!deleting) {
+      charIndex++;
+      el.textContent = word.slice(0, charIndex);
+      if (charIndex === word.length) {
+        deleting = true;
+        setTimeout(tick, 1400);
+        return;
       }
-    }, 28);
-  }
-
-  function playSequence(index) {
-    if (finished) return;
-    if (index >= lines.length) {
-      revealSite();
-      return;
+    } else {
+      charIndex--;
+      el.textContent = word.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
     }
-    typeLine(lines[index], () => playSequence(index + 1));
+    setTimeout(tick, deleting ? 40 : 70);
   }
-
-  function revealSite() {
-    if (finished) return;
-    finished = true;
-    clearInterval(talkInterval);
-    clearInterval(blinkInterval);
-    overlay.classList.add("hide");
-    site.classList.remove("site-hidden");
-    requestAnimationFrame(() => {
-      site.classList.add("site-visible");
-    });
-    setTimeout(() => {
-      overlay.style.display = "none";
-    }, 750);
-  }
-
-  // Failsafe: if anything goes wrong, never leave the site permanently hidden
-  setTimeout(() => {
-    if (!finished) revealSite();
-  }, 15000);
-
-  skipBtn.addEventListener("click", revealSite);
-
-  // Kick things off after a short beat so the avatar appears first
-  startBlinking();
-  setTimeout(() => playSequence(0), 500);
+  tick();
 })();
 
 // ============================================================
-// MISC: footer year, nav active state on scroll
+// SCROLL REVEAL
 // ============================================================
-document.getElementById("year").textContent = new Date().getFullYear();
+const revealEls = document.querySelectorAll(".reveal-up");
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+);
+revealEls.forEach((el) => revealObserver.observe(el));
 
-const navLinks = document.querySelectorAll(".nav-links a");
+// ============================================================
+// NAVBAR SCROLL STATE + ACTIVE LINK
+// ============================================================
+const navbar = document.getElementById("navbar");
+const navLinks = document.querySelectorAll(".nav-menu a");
 const sections = Array.from(navLinks)
   .map((a) => document.querySelector(a.getAttribute("href")))
   .filter(Boolean);
+const backToTop = document.getElementById("backToTop");
 
-function highlightNav() {
+function onScroll() {
+  navbar.classList.toggle("scrolled", window.scrollY > 30);
+  backToTop.classList.toggle("show", window.scrollY > 500);
+
   let current = sections[0];
-  const scrollPos = window.scrollY + 120;
+  const scrollPos = window.scrollY + 140;
   sections.forEach((sec) => {
     if (sec.offsetTop <= scrollPos) current = sec;
   });
   navLinks.forEach((a) => {
     const target = document.querySelector(a.getAttribute("href"));
-    a.style.color = target === current ? "var(--text-hi)" : "";
+    a.classList.toggle("active", target === current);
   });
 }
-window.addEventListener("scroll", highlightNav, { passive: true });
-highlightNav();
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+navLinks.forEach((a) =>
+  a.addEventListener("click", () => navMenu.classList.remove("open"))
+);
+
+// ============================================================
+// FOOTER YEAR
+// ============================================================
+document.getElementById("year").textContent = new Date().getFullYear();
