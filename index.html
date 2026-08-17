@@ -1,317 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nishvi Patel | Data Engineer & AI Developer</title>
-<meta name="description" content="Portfolio of Nishvi Patel, Data Engineer and AI Developer specializing in ETL pipelines, LLM applications, cloud systems, and data engineering.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="preloader">
-<div class="loader-ring"></div>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nishvi Patel | Data Engineer & AI Developer | Specialized in Data Engineering, AI/LLMs, and Cloud Infrastructure"
+    />
+    <meta name="theme-color" content="#0f0f1e" />
+    <title>Nishvi Patel | Data + AI + Cloud</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">NP.</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="cta-btn"><a href="#contact" style="color: inherit; text-decoration: none;">Hire me</a></button>
+      </div>
+    </nav>
 
-<!-- ============ NAV ============ -->
-<header class="navbar" id="navbar">
-<a href="#home" class="logo">NP<span>.</span></a>
-<nav class="nav-menu" id="navMenu">
-<a href="#home" class="active">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-</nav>
-<a href="#contact" class="nav-btn">Hire me</a>
-<button class="hamburger" id="hamburger" aria-label="Toggle menu">
-<span></span><span></span><span></span>
-</button>
-</header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hi there, I'm</h1>
+          <h2 class="name-title">Nishvi Patel</h2>
+          <p class="hero-subtitle">
+            Building data pipelines, AI systems, and cloud infrastructure
+            <br>that actually ship in production
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View my work</a>
+            <a href="Nishvi%20Patel%20Resume.pdf" class="btn btn-secondary" download>Resume</a>
+          </div>
+          <div class="hero-links">
+            <a href="https://github.com/Nishviprp" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank">LinkedIn</a>
+            <a href="mailto:nishviprp@gmail.com">Email</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="nishvi.jpg" alt="Nishvi Patel" />
+        </div>
+      </div>
+    </section>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="home">
-<div class="hero-bg">
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-<div class="grid-overlay"></div>
-</div>
-<div class="hero-inner">
-<div class="hero-text">
-<p class="hero-greet reveal-up">Hi there, I'm</p>
-<h1 class="hero-name reveal-up delay-1">Nishvi Patel</h1>
-<h2 class="hero-role reveal-up delay-2">
-<span id="typedRole"></span><span class="type-cursor">|</span>
-</h2>
-<p class="hero-desc reveal-up delay-3">
-Data Engineer &amp; AI Developer building ETL pipelines, cloud infrastructure,
-and LLM-powered applications - based in New Jersey City.
-</p>
-<div class="hero-actions reveal-up delay-4">
-<a href="#projects" class="btn btn-solid">View my work</a>
-<a href="Nishvi%20Patel%20Resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">
-<i class="fa-solid fa-download"></i> Resume
-</a>
-</div>
-<div class="hero-socials reveal-up delay-5">
-<a href="https://github.com/Nishviprp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-<a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-<a href="mailto:nishviprp@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-</div>
-</div>
-<div class="hero-photo reveal-up delay-2">
-<div class="photo-ring"></div>
-<img src="nishvi.jpg" alt="Nishvi Patel">
-<div class="float-card float-card-1"><i class="fa-solid fa-database"></i> Data Engineering</div>
-<div class="float-card float-card-2"><i class="fa-solid fa-robot"></i> AI &amp; LLMs</div>
-</div>
-</div>
-<a href="#about" class="scroll-down" aria-label="Scroll down">
-<i class="fa-solid fa-chevron-down"></i>
-</a>
-</section>
+    <!-- Three Pillars: Data + AI + Cloud -->
+    <section id="skills" class="skills-pillars">
+      <div class="container">
+        <h2 class="section-title">Core Skills</h2>
+        <p class="section-subtitle">Specialized in three interconnected domains</p>
+        
+        <div class="pillars-grid">
+          <!-- Data Pillar -->
+          <div class="pillar">
+            <div class="pillar-icon">📊</div>
+            <h3>Data</h3>
+            <p>ETL pipelines, data modeling, analytics, and warehousing</p>
+            <ul class="pillar-skills">
+              <li><strong>Engineering:</strong> Python, SQL, Airflow, Kafka, Spark</li>
+              <li><strong>Warehousing:</strong> Star Schema, OLAP, Data Modeling</li>
+              <li><strong>Analytics:</strong> Pandas, NumPy, Power BI, Tableau</li>
+              <li><strong>Databases:</strong> PostgreSQL, AWS RDS, S3</li>
+            </ul>
+          </div>
 
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
-<p class="section-tag reveal-up">Get to know me</p>
-<h2 class="section-title reveal-up">About Me</h2>
-<div class="about-grid">
-<div class="about-img reveal-up">
-<img src="nishvi.jpg" alt="Nishvi Patel portrait">
-<div class="about-img-accent"></div>
-</div>
-<div class="about-content reveal-up delay-1">
-<h3>Data Engineer &amp; AI Developer based in New Jersey City</h3>
-<p>
-I'm a Data Science graduate student at Stevens Institute of Technology with hands-on
-experience building ETL pipelines, cloud-native systems, and LLM-powered applications.
-I care about turning messy, real-world data into infrastructure that's reliable enough
-to run in production — not just in a notebook.
-</p>
-<p>
-My recent work spans fine-tuning open-source LLMs with LoRA, designing AWS architectures
-with dependency-risk analysis, and shipping ETL pipelines with Airflow. I'm comfortable
-moving between data engineering, machine learning, and analytics depending on what a
-problem actually needs.
-</p>
-<div class="about-info-grid">
-<div><span class="label">Email</span><span class="value">nishviprp@gmail.com</span></div>
-<div><span class="label">Location</span><span class="value">New Jersey City, NY</span></div>
-<div><span class="label">Degree</span><span class="value">MS Data Science (Stevens)</span></div>
-<div><span class="label">Status</span><span class="value">Open to opportunities</span></div>
-</div>
-<a href="#contact" class="btn btn-solid">Let's talk</a>
-</div>
-</div>
-</section>
+          <!-- AI Pillar -->
+          <div class="pillar">
+            <div class="pillar-icon">🤖</div>
+            <h3>AI & LLMs</h3>
+            <p>Fine-tuning, RAG, prompt engineering, and LLM applications</p>
+            <ul class="pillar-skills">
+              <li><strong>LLMs:</strong> Gemini, Qwen, CodeGen, OpenAI APIs</li>
+              <li><strong>Fine-tuning:</strong> LoRA, PEFT, HumanEval, Benchmarking</li>
+              <li><strong>Frameworks:</strong> Hugging Face, Streamlit, FastAPI</li>
+              <li><strong>Techniques:</strong> NLP, RAG, Prompt Engineering, PII Detection</li>
+            </ul>
+          </div>
 
-<!-- ============ SKILLS ============ -->
-<section class="section section-alt" id="skills">
-<p class="section-tag reveal-up">What I work with</p>
-<h2 class="section-title reveal-up">Skills &amp; Tools</h2>
-<div class="skills-grid">
-<div class="skill-card reveal-up">
-<div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-<h4>Programming &amp; Data Engineering</h4>
-<div class="tag-row">
-<span>Python</span><span>SQL</span><span>ETL Pipelines</span><span>Data Modeling</span><span>APIs</span>
-</div>
-</div>
-<div class="skill-card reveal-up delay-1">
-<div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
-<h4>AI &amp; Machine Learning</h4>
-<div class="tag-row">
-<span>LLMs</span><span>NLP</span><span>Hugging Face</span><span>LoRA</span><span>Scikit-learn</span><span>XGBoost</span>
-</div>
-</div>
-<div class="skill-card reveal-up delay-2">
-<div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
-<h4>Cloud &amp; Tools</h4>
-<div class="tag-row">
-<span>AWS (S3, EC2, RDS)</span><span>Airflow</span><span>Kafka</span><span>Docker</span><span>Git</span>
-</div>
-</div>
-<div class="skill-card reveal-up delay-3">
-<div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
-<h4>Data Analytics</h4>
-<div class="tag-row">
-<span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Power BI</span><span>Tableau</span>
-</div>
-</div>
-</div>
-</section>
+          <!-- Cloud Pillar -->
+          <div class="pillar">
+            <div class="pillar-icon">☁️</div>
+            <h3>Cloud & Infrastructure</h3>
+            <p>AWS architecture, containerization, and DevOps</p>
+            <ul class="pillar-skills">
+              <li><strong>AWS Services:</strong> EC2, S3, RDS, Lambda, VPC</li>
+              <li><strong>Infrastructure:</strong> Docker, Git, Terraform, CI/CD</li>
+              <li><strong>Architecture:</strong> System Design, Scalability, Reliability</li>
+              <li><strong>Tools:</strong> NetworkX, Dependency Analysis, CloudFormation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ============ PROJECTS ============ -->
-<section class="section" id="projects">
-<p class="section-tag reveal-up">Selected work</p>
-<h2 class="section-title reveal-up">Projects</h2>
-<p class="section-sub reveal-up">A mix of featured builds and projects pulled straight from my GitHub.</p>
-<div class="project-grid">
-<article class="project-card reveal-up">
-<div class="project-thumb thumb-1"><i class="fa-solid fa-chart-line"></i></div>
-<div class="project-body">
-<h4>FinSight &mdash; AI-Powered SEC Filing &amp; Earnings Call Analyzer</h4>
-<p>A deployed full-stack LLM app that turns a stock ticker into a structured breakdown of sentiment, risk factors, and forward guidance in under 30 seconds &mdash; pulling filings live from the SEC EDGAR API and analyzing them with Gemini. FastAPI backend, Streamlit dashboard, 82 automated tests.</p>
-<div class="tag-row"><span>FastAPI</span><span>LLM</span><span>Streamlit</span><span>SEC EDGAR</span></div>
-<a href="https://github.com/Nishviprp/finSightAi" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
-<a href="https://finsightaiapp.streamlit.app/" target="_blank" rel="noopener" class="card-link">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-</div>
-</article>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Production-ready systems across data, AI, and cloud</p>
 
-<article class="project-card reveal-up delay-1">
-<div class="project-thumb thumb-2"><i class="fa-solid fa-robot"></i></div>
-<div class="project-body">
-<h4>Fine-Tuned CodeGen LLM Benchmarking</h4>
-<p>Fine-tuned an open-source CodeGen-350M model with LoRA (PEFT) on 5,000+ Python samples and built an automated HumanEval evaluation harness, benchmarking pass@1/pass@5 against the Qwen2.5-Coder-1.5B-Instruct baseline across all 164 tasks.</p>
-<div class="tag-row"><span>Python</span><span>LLM</span><span>Hugging Face</span><span>LoRA</span></div>
-<a href="https://github.com/Nishviprp/CodeGen-LLM" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-</article>
+        <div class="projects-grid">
+          <!-- Project 1: FinSight -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>FinSight — AI-Powered SEC Filing Analyzer</h3>
+              <span class="project-badge">AI + Data</span>
+            </div>
+            <p class="project-description">
+              Full-stack LLM application that analyzes SEC filings and earnings calls in real-time. 
+              Extracts sentiment, risk factors, and forward guidance using Gemini API. Includes FastAPI backend, 
+              Streamlit frontend, and 82+ automated tests.
+            </p>
+            <div class="project-tech">
+              <span>FastAPI</span>
+              <span>Streamlit</span>
+              <span>Gemini LLM</span>
+              <span>SEC EDGAR API</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Nishviprp/finSightAi" target="_blank">Code</a>
+              <a href="https://finsightaiapp.streamlit.app/" target="_blank">Live Demo</a>
+            </div>
+          </div>
 
-<article class="project-card reveal-up delay-2">
-<div class="project-thumb thumb-9"><i class="fa-solid fa-shield-halved"></i></div>
-<div class="project-body">
-<h4>PrivaSeal &mdash; AI-Powered PII Redaction Pipeline</h4>
-<p>Team project: a fully local, modular redaction pipeline (PaddleOCR &rarr; Presidio NER &rarr; YOLOv8 visual PII detection) with zero cloud dependency. Built the Streamlit review dashboard and synthetic-document generators used for stress testing.</p>
-<div class="tag-row"><span>Python</span><span>OCR</span><span>YOLOv8</span></div>
-<a href="https://github.com/koensantos/privaseal-project" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-</article>
+          <!-- Project 2: CodeGen Fine-tuning -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Fine-Tuned CodeGen LLM Benchmarking</h3>
+              <span class="project-badge">AI</span>
+            </div>
+            <p class="project-description">
+              Fine-tuned CodeGen-350M with LoRA on 5,000+ Python samples. Built automated HumanEval 
+              evaluation harness benchmarking pass@1/pass@5 against Qwen2.5-Coder baseline across 164 tasks.
+            </p>
+            <div class="project-tech">
+              <span>Hugging Face</span>
+              <span>LoRA/PEFT</span>
+              <span>HumanEval</span>
+              <span>CodeGen</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Nishviprp/CodeGen-LLM" target="_blank">Code</a>
+            </div>
+          </div>
 
-<article class="project-card reveal-up">
-<div class="project-thumb thumb-2"><i class="fa-solid fa-diagram-project"></i></div>
-<div class="project-body">
-<h4>Citibike Star Schema &amp; AWS Risk Dependency Analysis</h4>
-<p>Designed a star-schema data warehouse optimized for OLAP queries across millions of NYC Citibike trip records, then modeled 22 AWS services and 38 interdependencies with NetworkX to find failure points affecting up to 70% of services.</p>
-<div class="tag-row"><span>AWS</span><span>Python</span><span>NetworkX</span></div>
-<a href="https://github.com/Nishviprp/citibike-star-schema" target="_blank" rel="noopener" class="card-link">Code <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-</article>
-</div>
-<div class="projects-more reveal-up">
-<a href="https://github.com/Nishviprp?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
-View all on GitHub <i class="fa-brands fa-github"></i>
-</a>
-</div>
-</section>
+          <!-- Project 3: PrivaSeal -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>PrivaSeal — PII Redaction Pipeline</h3>
+              <span class="project-badge">AI + Data</span>
+            </div>
+            <p class="project-description">
+              Modular, zero-cloud-dependency pipeline for PII detection and redaction. Combines PaddleOCR, 
+              Presidio NER, and YOLOv8 for comprehensive coverage. Built Streamlit dashboard for review and 
+              synthetic document generators for testing.
+            </p>
+            <div class="project-tech">
+              <span>PaddleOCR</span>
+              <span>Presidio</span>
+              <span>YOLOv8</span>
+              <span>Streamlit</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/koensantos/privaseal-project" target="_blank">Code</a>
+            </div>
+          </div>
 
-<!-- ============ EXPERIENCE ============ -->
-<section class="section section-alt" id="experience">
-<p class="section-tag reveal-up">Career so far</p>
-<h2 class="section-title reveal-up">Experience</h2>
-<div class="timeline">
-<div class="timeline-item reveal-up">
-<div class="timeline-dot"></div>
-<div class="timeline-card">
-<span class="timeline-date">Aug 2023 – Dec 2024</span>
-<h4>Senior Data Analyst</h4>
-<p class="timeline-org">Acorn Universal Consultancy LLP</p>
-<ul>
-<li>Designed automated ETL pipelines integrating Business Central 365, Excel, and Dynamics NAV, improving reporting efficiency by 30%.</li>
-<li>Built interactive Power BI dashboards tracking KPIs across 3 product platforms and 4 countries.</li>
-<li>Performed predictive analytics and Pareto analysis, improving forecasting accuracy by 15%.</li>
-</ul>
-</div>
-</div>
-<div class="timeline-item reveal-up delay-1">
-<div class="timeline-dot"></div>
-<div class="timeline-card">
-<span class="timeline-date">May 2023 – Jul 2023</span>
-<h4>Data Analyst Intern</h4>
-<p class="timeline-org">Elecon Engineering</p>
-<ul>
-<li>Built Power BI dashboards and forecasting models for occupancy, utilization, and revenue, improving forecast accuracy by 20%.</li>
-<li>Developed web scraping pipelines for competitor pricing and market demand analysis.</li>
-</ul>
-</div>
-</div>
-<div class="timeline-item reveal-up delay-2">
-<div class="timeline-dot"></div>
-<div class="timeline-card">
-<span class="timeline-date">Sep 2025 – Dec 2025</span>
-<h4>Teaching Assistant &amp; Grader</h4>
-<p class="timeline-org">Stevens Institute of Technology</p>
-<ul>
-<li>Graded assignments, projects, and exams for data science and analytics coursework.</li>
-<li>Supported students in understanding Python, data analysis, and ML techniques.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+          <!-- Project 4: Citibike Data Warehouse -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Citibike Star Schema & AWS Risk Analysis</h3>
+              <span class="project-badge">Data + Cloud</span>
+            </div>
+            <p class="project-description">
+              Designed normalized star-schema data warehouse for NYC Citibike trip data optimized for OLAP queries. 
+              Modeled 22 AWS services and 38 interdependencies with NetworkX to identify critical failure points 
+              affecting up to 70% of infrastructure.
+            </p>
+            <div class="project-tech">
+              <span>PostgreSQL</span>
+              <span>Star Schema</span>
+              <span>NetworkX</span>
+              <span>AWS</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Nishviprp/citibike-star-schema" target="_blank">Code</a>
+            </div>
+          </div>
 
-<!-- ============ EDUCATION ============ -->
-<section class="section" id="education">
-<p class="section-tag reveal-up">Background</p>
-<h2 class="section-title reveal-up">Education</h2>
-<div class="edu-grid">
-<div class="edu-card reveal-up">
-<div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-<h4>Master of Science in Data Science</h4>
-<p class="edu-org">Stevens Institute of Technology · Hoboken, NJ</p>
-<p class="edu-date">Jan 2025 – May 2026 (Expected)</p>
-<p class="edu-note">Relevant coursework: Data Engineering, Machine Learning, Cloud Computing</p>
-</div>
-<div class="edu-card reveal-up delay-1">
-<div class="edu-icon"><i class="fa-solid fa-school"></i></div>
-<h4>Bachelor of Engineering in Computer Engineering</h4>
-<p class="edu-org">Charutar Vidya Mandal University · Gujarat, India</p>
-<p class="edu-date">Jul 2020 – Jul 2024</p>
-</div>
-</div>
-</section>
+          <!-- Project 5: Conversion Core -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Conversion Core — ML Pipeline Infrastructure</h3>
+              <span class="project-badge">Data + Cloud</span>
+            </div>
+            <p class="project-description">
+              Scalable ML pipeline framework for feature engineering and model deployment. 
+              Handles ETL, feature store integration, and end-to-end model orchestration with 
+              production-grade error handling and monitoring.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>XGBoost</span>
+              <span>Docker</span>
+              <span>Git</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Nishviprp/Conversion-Core" target="_blank">Code</a>
+            </div>
+          </div>
 
-<!-- ============ CONTACT ============ -->
-<section class="section section-alt" id="contact">
-<p class="section-tag reveal-up">Open to opportunities</p>
-<h2 class="section-title reveal-up">Let's Talk</h2>
-<p class="section-sub reveal-up">Open to Data Engineer, AI Developer, and Data Analyst roles — actively seeking full-time and internship opportunities.</p>
-<div class="contact-grid">
-<div class="contact-info reveal-up">
-<div class="contact-item">
-<div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-<div><span class="label">Email</span><a href="mailto:nishviprp@gmail.com">nishviprp@gmail.com</a></div>
-</div>
-<div class="contact-item">
-<div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-<div><span class="label">Phone</span><a href="tel:+12017619209">+1 (201) 761-9209</a></div>
-</div>
-<div class="contact-item">
-<div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-<div><span class="label">Location</span><span class="value">New Jersey City, NY</span></div>
-</div>
-<div class="contact-socials">
-<a href="https://github.com/Nishviprp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-<a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-</div>
-<form class="contact-form reveal-up delay-1" action="https://formsubmit.co/nishviprp@gmail.com" method="POST">
-<div class="form-row">
-<input type="text" name="name" placeholder="Your name" required>
-<input type="email" name="email" placeholder="Your email" required>
-</div>
-<input type="text" name="subject" placeholder="Subject">
-<textarea name="message" rows="5" placeholder="Your message" required></textarea>
-<button type="submit" class="btn btn-solid">Send message <i class="fa-solid fa-paper-plane"></i></button>
-</form>
-</div>
-</section>
+          <!-- Project 6: AWS LMS Analysis -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>AWS LMS Cost & Performance Analysis</h3>
+              <span class="project-badge">Cloud + Data</span>
+            </div>
+            <p class="project-description">
+              Comprehensive analysis of AWS Learning Management System costs and performance metrics. 
+              Data extraction, transformation, and visualization for cost optimization and infrastructure 
+              efficiency recommendations.
+            </p>
+            <div class="project-tech">
+              <span>AWS</span>
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Tableau</span>
+              <span>SQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Nishviprp/aws-lms-analysis" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-<a href="#home" class="logo">NP<span>.</span></a>
-<p>© <span id="year"></span> Nishvi Patel. Built with curiosity and a lot of coffee.</p>
-<div class="footer-socials">
-<a href="https://github.com/Nishviprp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-<a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-<a href="mailto:nishviprp@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-</div>
-</footer>
-<a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
-<script src="script.js"></script>
-</body>
+        <div class="view-all">
+          <a href="https://github.com/Nishviprp?tab=repositories" target="_blank" class="btn btn-secondary">
+            View all projects on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-timeline">
+          <!-- Shana Data & AI Consultancy -->
+          <div class="experience-item">
+            <div class="exp-date">Aug 2024 – Present</div>
+            <div class="exp-content">
+              <h3>Founder & Owner</h3>
+              <p class="exp-company">Shana Data & AI Consultancy LLC</p>
+              <ul class="exp-points">
+                <li>Founded independent consulting practice specializing in data engineering, AI/LLM systems, and cloud architecture</li>
+                <li>Developed data pipelines and analytics solutions for enterprise clients</li>
+                <li>Built LLM-powered applications and fine-tuning workflows</li>
+                <li>Designed AWS infrastructure and cloud-native architectures</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Senior Data Analyst -->
+          <div class="experience-item">
+            <div class="exp-date">Aug 2023 – Dec 2024</div>
+            <div class="exp-content">
+              <h3>Senior Data Analyst</h3>
+              <p class="exp-company">Acorn Universal Consultancy LLP</p>
+              <ul class="exp-points">
+                <li>Designed automated ETL pipelines integrating Business Central 365, Excel, and Dynamics NAV (30% efficiency gain)</li>
+                <li>Built interactive Power BI dashboards tracking KPIs across 3 platforms and 4 countries</li>
+                <li>Performed predictive analytics and Pareto analysis (15% forecasting accuracy improvement)</li>
+                <li>Led data quality initiatives and warehouse optimization</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Data Analyst Intern -->
+          <div class="experience-item">
+            <div class="exp-date">May 2023 – Jul 2023</div>
+            <div class="exp-content">
+              <h3>Data Analyst Intern</h3>
+              <p class="exp-company">Elecon Engineering</p>
+              <ul class="exp-points">
+                <li>Built Power BI dashboards for occupancy, utilization, and revenue tracking</li>
+                <li>Developed forecasting models (20% accuracy improvement)</li>
+                <li>Created web scraping pipelines for competitor analysis and market demand monitoring</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Teaching Assistant -->
+          <div class="experience-item">
+            <div class="exp-date">Sep 2025 – Dec 2025</div>
+            <div class="exp-content">
+              <h3>Teaching Assistant & Grader</h3>
+              <p class="exp-company">Stevens Institute of Technology</p>
+              <ul class="exp-points">
+                <li>Graded assignments, projects, and exams for data science and analytics courses</li>
+                <li>Mentored students in Python, data analysis, and machine learning fundamentals</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-grid">
+          <div class="education-card">
+            <h3>Master of Science in Data Science</h3>
+            <p class="edu-school">Stevens Institute of Technology · Hoboken, NJ</p>
+            <p class="edu-dates">Jan 2025 – May 2026 (Expected)</p>
+            <p class="edu-details">
+              <strong>Relevant Coursework:</strong> Data Engineering, Machine Learning, Cloud Computing, 
+              Statistical Analysis, Advanced SQL
+            </p>
+            <p class="edu-gpa"><strong>Status:</strong> Strong academic standing</p>
+          </div>
+
+          <div class="education-card">
+            <h3>Bachelor of Engineering in Computer Engineering</h3>
+            <p class="edu-school">Charutar Vidya Mandal University · Gujarat, India</p>
+            <p class="edu-dates">Jul 2020 – Jul 2024</p>
+            <p class="edu-details">
+              <strong>Focus Areas:</strong> Software Engineering, Database Design, Cloud Systems
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Talk</h2>
+        <p class="section-subtitle">Open to Data Engineer, AI Developer, and Cloud Infrastructure roles</p>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:nishviprp@gmail.com">nishviprp@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+12017619209">+1 (201) 761-9209</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <p>New Jersey City, NY</p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://github.com/Nishviprp" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank">LinkedIn</a>
+          <a href="mailto:nishviprp@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Nishvi Patel. Built with curiosity and a lot of coffee.</p>
+        <div class="footer-links">
+          <a href="https://github.com/Nishviprp" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/nishvi-patel-9186a4219" target="_blank">LinkedIn</a>
+          <a href="mailto:nishviprp@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
